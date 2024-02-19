@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 50),
 
                 // app name
-                const Text("SHOP SYNC", style: TextStyle(fontSize: 20)),
+                const Text("S H O P S Y N C", style: TextStyle(fontSize: 20)),
                 const SizedBox(height: 25),
 
                 // email textfield
@@ -98,7 +98,10 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20),
 
                 // sign in button
-                MyButton(text: "Login", onTap: login),
+                MyButton(
+                  text: "Login",
+                  onTap: login,
+                ),
                 const SizedBox(height: 20),
 
                 // don't have an account? Register here

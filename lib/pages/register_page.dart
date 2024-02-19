@@ -85,7 +85,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 // app name
                 const Text("S H O P S Y N C", style: TextStyle(fontSize: 20)),
 
-                const SizedBox(height: 25),
+                const SizedBox(height: 10),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Sign up & easily access shopsync services",
+                        style: TextStyle(
+                            color:
+                                Theme.of(context).colorScheme.inversePrimary)),
+                  ],
+                ),
+                const SizedBox(height: 30),
 
                 // username textfield
                 MyTextField(
@@ -121,16 +132,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(height: 10),
 
                 // forgot password
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text("Forget Password?",
-                        style: TextStyle(
-                            color:
-                                Theme.of(context).colorScheme.inversePrimary)),
-                  ],
-                ),
-                const SizedBox(height: 20),
 
                 // register button
                 MyButton(

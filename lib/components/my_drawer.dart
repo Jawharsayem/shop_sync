@@ -1,7 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
+
+  // logout user
+  void logout() {
+    FirebaseAuth.instance.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +29,35 @@ class MyDrawer extends StatelessWidget {
               leading: Icon(Icons.home,
                   color: Theme.of(context).colorScheme.primary),
               title: Text("H O M E"),
+              onTap: () {
+                // This is already the home screen so just pop drawer
+                Navigator.pop(context);
+              },
+            ),
+          ),
+
+          // PROFILE TITTLE
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0),
+            child: ListTile(
+              leading: Icon(Icons.home,
+                  color: Theme.of(context).colorScheme.primary),
+              title: Text(" P R O F I L E"),
+              onTap: () {
+                // This is already the home screen so just pop drawer
+                Navigator.pop(context);
+              },
+            ),
+          ),
+
+          //USER TITTLE
+
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0),
+            child: ListTile(
+              leading: Icon(Icons.home,
+                  color: Theme.of(context).colorScheme.primary),
+              title: Text("U S E R"),
               onTap: () {
                 // This is already the home screen so just pop drawer
                 Navigator.pop(context);
@@ -106,6 +141,29 @@ class MyDrawer extends StatelessWidget {
               onTap: () {
                 // This is already the home screen so just pop drawer
                 Navigator.pop(context);
+              },
+            ),
+          ),
+
+          const SizedBox(
+            height: 50,
+          ),
+
+          // logout tile
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0),
+            child: ListTile(
+              leading: Icon(
+                Icons.home,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              title: Text("L O G O U T"),
+              onTap: () {
+                // pop drawer
+                Navigator.pop(context);
+
+                // logout
+                logout();
               },
             ),
           ),

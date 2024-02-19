@@ -4,7 +4,11 @@ class MyButton extends StatelessWidget {
   final String text;
   final void Function()? onTap;
 
-  const MyButton({super.key, required this.text, required this.onTap});
+  const MyButton({
+    super.key,
+    required this.text,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +18,7 @@ class MyButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 15),
         child: Container(
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primary,
+            color: Colors.grey.shade500,
             borderRadius: BorderRadius.circular(12),
           ),
           padding: const EdgeInsets.all(15),
